@@ -1,0 +1,13 @@
+{
+  "id": "id",
+  "name": "name",
+  "icon": "icon",
+  "checkInImage": "checkInImage",
+  "missionDayUnit": 0,
+  "missionDayCheckInStep": 1,
+  "missionDayTarget": 1,
+  "typeHabitMissionDayCheckIn": 0,
+  "typeHabitGoal": 0,
+  "isFinished": false,
+  "frequency": { "typeFrequency": 1, "dailyDays": null, "weeklyDays": null }
+}

@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:habit/core/usecases/usecases.dart';
 import 'package:habit/features/habit/domain/entity/habit.dart';
 import 'package:habit/features/habit/domain/entity/habit_frequency.dart';
 import 'package:habit/features/habit/domain/repositories/habit_repository.dart';
@@ -22,7 +23,7 @@ void main() {
   final tHabitFrequency = HabitFrequency(typeFrequency: 0);
   final tHabit = Habit(
     id: 'id',
-    iconUrl: 'iconUrl',
+    icon: 'icon',
     checkInImage: 'checkInImage',
     name: 'name',
     missionDayUnit: 0,
@@ -30,24 +31,20 @@ void main() {
     missionDayTarget: 1,
     typeHabitMissionDayCheckIn: 0,
     typeHabitGoal: 0,
-    createdAt: DateTime.now().toIso8601String(),
-    updatedAt: DateTime.now().toIso8601String(),
     frequency: tHabitFrequency,
   );
 
   final tHabitList = List.generate(5, (index) => tHabit).toList();
 
   test('should get habit list from the repository', () async {
+    // arrange
     when(mockHabitRepository.getHabitList())
         .thenAnswer((realInvocation) async => Right(tHabitList));
-
-    final result = await getHabitList.execute();
-
-    // UseCase should simply return whatever was returned from the Repository
+    // act
+    final result = await getHabitList(NoParams());
+    // assert
     expect(result, Right(tHabitList));
-    // Verify that the method has been called on the Repository
     verify(mockHabitRepository.getHabitList());
-    // Only the above method should be called and nothing more.
     verifyNoMoreInteractions(mockHabitRepository);
   });
 }
