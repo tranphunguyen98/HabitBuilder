@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:habit/core/error/exception.dart';
 import 'package:habit/core/error/failure.dart';
-import 'package:habit/core/platform/network_info.dart';
+import 'package:habit/core/network/network_info.dart';
 import 'package:habit/features/habit/data/datasources/habit_local_data_source.dart';
 import 'package:habit/features/habit/data/datasources/habit_remote_data_source.dart';
 import 'package:habit/features/habit/data/models/habit_model.dart';

@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i4;
 
-import 'package:habit/core/platform/network_info.dart' as _i7;
+import 'package:habit/core/network/network_info.dart' as _i7;
 import 'package:habit/features/habit/data/datasources/habit_local_data_source.dart'
     as _i6;
 import 'package:habit/features/habit/data/datasources/habit_remote_data_source.dart'
