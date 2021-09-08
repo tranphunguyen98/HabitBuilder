@@ -2,14 +2,14 @@
 // in habit/test/features/habit/data/repositories/habit_repository_impl_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i4;
+import 'dart:async' as _i5;
 
 import 'package:habit/core/network/network_info.dart' as _i7;
 import 'package:habit/features/habit/data/datasources/habit_local_data_source.dart'
     as _i6;
 import 'package:habit/features/habit/data/datasources/habit_remote_data_source.dart'
-    as _i3;
-import 'package:habit/features/habit/data/models/habit_model.dart' as _i5;
+    as _i4;
+import 'package:habit/features/habit/data/models/habit_model.dart' as _i3;
 import 'package:habit/features/habit/domain/entity/habit.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
@@ -23,39 +23,41 @@ import 'package:mockito/mockito.dart' as _i1;
 
 class _FakeHabit_0 extends _i1.Fake implements _i2.Habit {}
 
+class _FakeHabitModel_1 extends _i1.Fake implements _i3.HabitModel {}
+
 /// A class which mocks [HabitRemoteDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockHabitRemoteDataSource extends _i1.Mock
-    implements _i3.HabitRemoteDataSource {
+    implements _i4.HabitRemoteDataSource {
   MockHabitRemoteDataSource() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.Future<bool> addHabit(_i2.Habit? habit) =>
+  _i5.Future<bool> addHabit(_i2.Habit? habit) =>
       (super.noSuchMethod(Invocation.method(#addHabit, [habit]),
-          returnValue: Future<bool>.value(false)) as _i4.Future<bool>);
+          returnValue: Future<bool>.value(false)) as _i5.Future<bool>);
   @override
-  _i4.Future<_i2.Habit> updateHabit(_i2.Habit? habit) =>
+  _i5.Future<_i2.Habit> updateHabit(_i2.Habit? habit) =>
       (super.noSuchMethod(Invocation.method(#updateHabit, [habit]),
               returnValue: Future<_i2.Habit>.value(_FakeHabit_0()))
-          as _i4.Future<_i2.Habit>);
+          as _i5.Future<_i2.Habit>);
   @override
-  _i4.Future<_i2.Habit> getDetailHabit(String? habitId) =>
+  _i5.Future<_i2.Habit> getDetailHabit(String? habitId) =>
       (super.noSuchMethod(Invocation.method(#getDetailHabit, [habitId]),
               returnValue: Future<_i2.Habit>.value(_FakeHabit_0()))
-          as _i4.Future<_i2.Habit>);
+          as _i5.Future<_i2.Habit>);
   @override
-  _i4.Future<List<_i5.HabitModel>> getHabitList() => (super.noSuchMethod(
+  _i5.Future<List<_i3.HabitModel>> getHabitList() => (super.noSuchMethod(
           Invocation.method(#getHabitList, []),
-          returnValue: Future<List<_i5.HabitModel>>.value(<_i5.HabitModel>[]))
-      as _i4.Future<List<_i5.HabitModel>>);
+          returnValue: Future<List<_i3.HabitModel>>.value(<_i3.HabitModel>[]))
+      as _i5.Future<List<_i3.HabitModel>>);
   @override
-  _i4.Future<void> deleteHabit(_i2.Habit? habit) =>
+  _i5.Future<void> deleteHabit(_i2.Habit? habit) =>
       (super.noSuchMethod(Invocation.method(#deleteHabit, [habit]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
   String toString() => super.toString();
 }
@@ -70,63 +72,63 @@ class MockHabitLocalDataSource extends _i1.Mock
   }
 
   @override
-  _i4.Future<void> addHabit(_i2.Habit? habit) =>
+  _i5.Future<void> addHabit(_i3.HabitModel? habit) =>
       (super.noSuchMethod(Invocation.method(#addHabit, [habit]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<void> updateHabit(_i2.Habit? habit) =>
+  _i5.Future<void> updateHabit(_i3.HabitModel? habit) =>
       (super.noSuchMethod(Invocation.method(#updateHabit, [habit]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<void> checkInHabit(_i2.Habit? habit, String? chosenDay,
+  _i5.Future<void> checkInHabit(_i3.HabitModel? habit, String? chosenDay,
           [int? checkInAmount]) =>
       (super.noSuchMethod(
           Invocation.method(#checkInHabit, [habit, chosenDay, checkInAmount]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<void> resetHabitOnDay(_i2.Habit? habit, String? chosenDay) =>
+  _i5.Future<void> resetHabitOnDay(_i3.HabitModel? habit, String? chosenDay) =>
       (super.noSuchMethod(
           Invocation.method(#resetHabitOnDay, [habit, chosenDay]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<_i2.Habit> getDetailHabit(String? id) =>
+  _i5.Future<_i3.HabitModel> getDetailHabit(String? id) =>
       (super.noSuchMethod(Invocation.method(#getDetailHabit, [id]),
-              returnValue: Future<_i2.Habit>.value(_FakeHabit_0()))
-          as _i4.Future<_i2.Habit>);
+              returnValue: Future<_i3.HabitModel>.value(_FakeHabitModel_1()))
+          as _i5.Future<_i3.HabitModel>);
   @override
-  _i4.Future<void> saveHabits(List<_i2.Habit>? habits) =>
+  _i5.Future<void> saveHabits(List<_i3.HabitModel>? habits) =>
       (super.noSuchMethod(Invocation.method(#saveHabits, [habits]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<List<_i2.Habit>> getAllHabit() =>
-      (super.noSuchMethod(Invocation.method(#getAllHabit, []),
-              returnValue: Future<List<_i2.Habit>>.value(<_i2.Habit>[]))
-          as _i4.Future<List<_i2.Habit>>);
+  _i5.Future<List<_i3.HabitModel>> getAllHabit() => (super.noSuchMethod(
+          Invocation.method(#getAllHabit, []),
+          returnValue: Future<List<_i3.HabitModel>>.value(<_i3.HabitModel>[]))
+      as _i5.Future<List<_i3.HabitModel>>);
   @override
-  _i4.Future<void> clearOffline() =>
+  _i5.Future<void> clearOffline() =>
       (super.noSuchMethod(Invocation.method(#clearOffline, []),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<void> deletePermanentlyHabit(_i2.Habit? habit) =>
+  _i5.Future<void> deletePermanentlyHabit(_i3.HabitModel? habit) =>
       (super.noSuchMethod(Invocation.method(#deletePermanentlyHabit, [habit]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<void> updateHabitAsync(_i2.Habit? habit) =>
+  _i5.Future<void> updateHabitAsync(_i3.HabitModel? habit) =>
       (super.noSuchMethod(Invocation.method(#updateHabitAsync, [habit]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
-  _i4.Future<void> cacheHabitList(List<_i5.HabitModel>? habitList) =>
+  _i5.Future<void> cacheHabitList(List<_i3.HabitModel>? habitList) =>
       (super.noSuchMethod(Invocation.method(#cacheHabitList, [habitList]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
   String toString() => super.toString();
 }
@@ -140,9 +142,9 @@ class MockNetworkInfo extends _i1.Mock implements _i7.NetworkInfo {
   }
 
   @override
-  _i4.Future<bool> get isConnected =>
+  _i5.Future<bool> get isConnected =>
       (super.noSuchMethod(Invocation.getter(#isConnected),
-          returnValue: Future<bool>.value(false)) as _i4.Future<bool>);
+          returnValue: Future<bool>.value(false)) as _i5.Future<bool>);
   @override
   String toString() => super.toString();
 }
